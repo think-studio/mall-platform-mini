@@ -1,4 +1,5 @@
-const path = require('path');
+import path from 'path';
+import TerserPlugin from 'terser-webpack-plugin';
 
 const config = {
 	projectName: 'mall-platform-mini',
@@ -84,7 +85,6 @@ const config = {
 				chain.optimization.minimize(true);
 				chain.plugin('terser').use(TerserPlugin, [
 					{
-						cache: true,
 						extractComments: false,
 						parallel: true,
 						terserOptions: {
