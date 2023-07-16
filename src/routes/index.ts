@@ -1,12 +1,20 @@
-const index = 'index';
-const login = 'login';
+// const index = 'index';
+// const login = 'login';
+const home = 'home';
+const category = 'category';
+const cart = 'cart';
+const user = 'user';
 
 export const routes = {
-	[index]: 'pages/index/index',
-	[login]: 'pages/login/login'
+	// [index]: 'pages/index/index',
+	// [login]: 'pages/login/login',
+	[home]: 'pages/tabbar/home/home',
+	[category]: 'pages/tabbar/category/category',
+	[cart]: 'pages/tabbar/cart/cart',
+	[user]: 'pages/tabbar/user/user'
 };
 
-const routeNames = [index, login] as const;
+const routeNames = [home,category,cart,user] as const;
 
 export type RouteName = (typeof routeNames)[number];
 
