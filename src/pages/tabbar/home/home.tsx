@@ -12,7 +12,6 @@ function Home() {
 	},[])
 	return (
 		<Wrapper>
-			{/*动态组件 */}
 			<Preview></Preview>
 		</Wrapper>
 	);
@@ -23,6 +22,8 @@ export default Home;
 
 const Wrapper = styled(View)`
 	position: relative;
-	height: 100vh;
 	overflow: hidden;
+	display:flex;
+	flex-direction:column;
+	border:4rpx solid pink;
 `;
