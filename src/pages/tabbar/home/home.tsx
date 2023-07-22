@@ -25,5 +25,5 @@ const Wrapper = styled(View)`
 	overflow: hidden;
 	display:flex;
 	flex-direction:column;
-	border:4rpx solid pink;
+	/* border:4rpx solid pink; */
 `;
