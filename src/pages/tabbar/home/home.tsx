@@ -22,7 +22,6 @@ export default Home;
 
 const Wrapper = styled(View)`
 	position: relative;
-	overflow: hidden;
 	display:flex;
 	flex-direction:column;
 	/* border:4rpx solid pink; */

@@ -4,7 +4,11 @@ import TerserPlugin from 'terser-webpack-plugin';
 const config = {
 	projectName: 'mall-platform-mini',
 	date: '2023-7-11',
-	designWidth: 375,
+	designWidth(input){
+		if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
+			return 375
+		}
+	},
 	deviceRatio: {
 		640: 2.34 / 2,
 		750: 1,
