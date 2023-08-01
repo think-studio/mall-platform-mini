@@ -15,8 +15,7 @@ const HomeTab = () => {
             <Tabs 
                 value={tab1value}
                 onChange={value=>switchTab(value)} 
-                tabStyle={{ position: 'sticky', top: '0px', zIndex: 11 }}
-                type="smile"
+                tabStyle={{ position: 'sticky', top: '0px', zIndex: 11 }} activeType='smile'
                
             >
                 <Tabs.TabPane title="Tab 1"> 
