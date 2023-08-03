@@ -1,10 +1,14 @@
+
 import { useEffect } from 'react';
 import { useDidShow, useDidHide } from '@tarojs/taro';
+import '@nutui/nutui-react/dist/style.css';
+import "@nutui/nutui-biz/dist/style.css";
 
 import { Provider } from 'react-redux';
 import { store } from './store';
 
 // 全局样式
+
 import './app.scss';
 import Router from './routes/router';
 
