@@ -4,9 +4,9 @@ import TerserPlugin from 'terser-webpack-plugin';
 const config = {
 	projectName: 'mall-platform-mini',
 	date: '2023-7-11',
-	designWidth(input){
+	designWidth(input) {
 		if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
-			return 375
+			return 375;
 		}
 	},
 	deviceRatio: {
@@ -41,7 +41,7 @@ const config = {
 		enable: true // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
 	},
 	sass: {
-		data: `@import "@nutui/nutui-react-taro/dist/styles/variables.scss";`
+		data: `@import "@nutui/nutui-biz/dist/styles/variables.scss";`
 	},
 	mini: {
 		imageUrlLoaderOption: {

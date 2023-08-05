@@ -15,12 +15,12 @@ module.exports = {
 		[
 			'import',
 			{
-				libraryName: '@nutui/nutui-react-taro',
+				libraryName: '@nutui/nutui-biz',
 				libraryDirectory: 'dist/esm',
-				style: 'css',
+				style: true,
 				camel2DashComponentName: false
 			},
-			'nutui-react-taro'
+			'nutui-biz'
 		]
 	]
 };

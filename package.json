@@ -9,7 +9,8 @@
 		"css": "sass"
 	},
 	"scripts": {
-		"build:weapp": "taro build --type weapp",
+		"build:prod": "cross-env NODE_ENV=production TARO_ENDPOINT_ENV=prod taro build --type weapp",
+		"build:test": "cross-env NODE_ENV=production TARO_ENDPOINT_ENV=test taro build --type weapp",
 		"build:swan": "taro build --type swan",
 		"build:alipay": "taro build --type alipay",
 		"build:tt": "taro build --type tt",
@@ -18,7 +19,7 @@
 		"build:qq": "taro build --type qq",
 		"build:jd": "taro build --type jd",
 		"build:quickapp": "taro build --type quickapp",
-		"dev:weapp": "npm run build:weapp -- --watch",
+		"dev": "cross-env NODE_ENV=development TARO_ENDPOINT_ENV=dev taro build --type weapp --watch",
 		"dev:swan": "npm run build:swan -- --watch",
 		"dev:alipay": "npm run build:alipay -- --watch",
 		"dev:tt": "npm run build:tt -- --watch",
@@ -37,7 +38,8 @@
 	"license": "MIT",
 	"dependencies": {
 		"@babel/runtime": "^7.7.7",
-		"@nutui/nutui-react-taro": "^2.0.7",
+		"@nutui/nutui-biz": "^1.0.0-beta.2",
+		"@nutui/nutui-react-taro": "^1.4.7",
 		"@reduxjs/toolkit": "^1.9.5",
 		"@tarojs/components": "3.6.8",
 		"@tarojs/helper": "3.6.8",
@@ -84,7 +86,7 @@
 		"@types/webpack-env": "^1.13.6",
 		"@typescript-eslint/eslint-plugin": "^5.20.0",
 		"@typescript-eslint/parser": "^5.20.0",
-		"babel-plugin-import": "^1.13.6",
+		"babel-plugin-import": "^1.13.3",
 		"babel-preset-taro": "3.6.8",
 		"cross-env": "^7.0.3",
 		"eslint": "^8.44.0",
