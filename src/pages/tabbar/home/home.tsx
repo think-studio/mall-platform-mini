@@ -4,7 +4,7 @@ import Router from '/@/routes/router';
 import { styled } from 'linaria/lib/react';
 import { useEffect, useRef } from 'react';
 import Preview from "./preview"
-
+import Navbar from '/@/components/Navbar/Navbar';
 
 function Home() {
 	let viewRef=useRef(null)
@@ -12,6 +12,8 @@ function Home() {
 	},[])
 	return (
 		<Wrapper>
+				 <Navbar></Navbar>
+			
 			<Preview></Preview>
 		</Wrapper>
 	);

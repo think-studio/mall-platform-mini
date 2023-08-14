@@ -3,7 +3,7 @@ import { styled } from 'linaria/lib/react';
 
 import React, { useState } from "react";
 import { Tabs } from '@nutui/nutui-react-taro';
-// import "@nutui/nutui-taro/dist/style.css";
+import Navbar from '/@/components/Navbar/Navbar';
 
 const HomeTab = () => {
     const [tab1value, setTab1value] = useState('0');

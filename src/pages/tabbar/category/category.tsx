@@ -7,6 +7,7 @@ import type {
 	Category,
 	CategoryPaneItem
 } from '/@/nutui-biz-mini/Category/props';
+import Navbar from '/@/components/Navbar/Navbar';
 
 function Category() {
 	const [category, setCategory] = useState();
@@ -28,6 +29,7 @@ function Category() {
 	}, []);
 	return (
 		<Wrapper>
+			<Navbar></Navbar>
 			<CategoryList
 				showSecondLevelQuickNav
 				category={category}
