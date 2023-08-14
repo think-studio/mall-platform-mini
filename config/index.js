@@ -24,6 +24,20 @@ const config = {
 			{
 				css: 'sass' //可配置css编译器： 支持 none sass less stylus
 			}
+		],
+		[
+			'@tarojs/plugin-inject',
+			{
+				components: {
+					// 新增一个 'CustomComponent' 组件并支持 'catchtouchend' 事件
+					CustomComponent: {
+						catchtouchend: 'eh'
+					}
+				},
+				componentsMap: {
+					CustomComponent: 'custom-component'
+				}
+			}
 		]
 	],
 	alias: {
@@ -36,12 +50,18 @@ const config = {
 		options: {}
 	},
 	framework: 'react',
-	compiler: 'webpack5',
+	compiler: {
+		type: 'webpack5',
+		prebundle: {
+			enable: false,
+			exclude: ['@nutui/nutui-react-taro']
+		}
+	},
 	cache: {
 		enable: true // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
 	},
 	sass: {
-		data: `@import "@nutui/nutui-biz/dist/styles/variables.scss";`
+		data: `@import "@nutui/nutui-react-taro/dist/styles/variables.scss";`
 	},
 	mini: {
 		imageUrlLoaderOption: {
