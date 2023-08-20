@@ -1,3 +1,5 @@
+
+
 export const isObject = (val: unknown): val is Record<any, any> =>
   val !== null && typeof val === 'object'
 
@@ -27,3 +29,4 @@ export const floatData = (format: any, dataOp: any, mapOps: any) => {
 };
 
 export const errorImg = '//img12.360buyimg.com/imagetools/jfs/t1/180776/26/8319/4587/60c094a8E1ef2ec9d/940780b87700b1d3.png'
+
