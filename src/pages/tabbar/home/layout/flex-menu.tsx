@@ -71,10 +71,8 @@ function FlexMenu() {
 export default FlexMenu
 
 const Layout = styled(View)`
-/* border:1px solid green; */
     .menu-content{
         width: calc(100vw - 32rpx);
-        /* border: 1px solid blue; */
         display: flex;
         align-items: center;
         justify-content: space-between;

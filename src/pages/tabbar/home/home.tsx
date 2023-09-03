@@ -12,9 +12,10 @@ function Home() {
 	},[])
 	return (
 		<Wrapper>
-				 <Navbar></Navbar>
-			
-			<Preview></Preview>
+			{/* <Navbar></Navbar> */}
+			<View className='sttey'>
+				<Preview ></Preview>
+			</View>
 		</Wrapper>
 	);
 }
@@ -27,4 +28,9 @@ const Wrapper = styled(View)`
 	display:flex;
 	flex-direction:column;
 	/* border:4rpx solid pink; */
+	.sttey{
+		background-color: pink;
+		height: 100vh;
+		margin-top: calc(100vh - 60px);
+	}
 `;

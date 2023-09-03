@@ -69,5 +69,6 @@ export const getSystemInfo=()=>{
     systemInfo.ios=ios
     //缓存到全局变量
     // getSystemInfo.prototype.cache.globalSystemInfo=systemInfo
+    console.log('systemInfo',systemInfo)
     return systemInfo
 }

@@ -1,26 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { View } from '@tarojs/components';
 import { NavBar, SearchBar } from '@nutui/nutui-react-taro';
-import Taro from '@tarojs/taro'
+import { styled } from 'linaria/lib/react';
 import { getSystemInfo } from '/@/api/common/device';
-
 const globalSystemInfo = getSystemInfo()
-export default function Navbar() {
+function Navbar() {
     const [navBarStyle, setNavBarStyle] = useState({})
     const initNavLocation = () => {
         setNavBarStyle(() => setBarStyle(globalSystemInfo))
     }
     const setBarStyle = (systemInfo) => {
         const { navBarHeight, capsulePosition, statusBarHeight, navBarExtendHeight, windowWidth } = systemInfo
-        console.log(navBarExtendHeight, 'navBarExtendHeight')
         const navBarstyle = {
-            border: `1px solid green`,
-            // backgroundColor:'pink',
-            // position: 'fixed',
-            // zIndex:'22',
-            // top: '0',
-            // left: '0',
-            width: `${windowWidth}`,
+            border: `1px solid red`,
             height: `${navBarHeight + navBarExtendHeight}px`,
             paddingTop: `${statusBarHeight}px`,
             paddingRight: `${windowWidth - capsulePosition.left}px`,
@@ -28,25 +20,28 @@ export default function Navbar() {
         }
         return navBarstyle
     }
-    const setBarContentStyle = (systemInfo) => {
-        const { capsulePosition } = systemInfo
-        const BarContentStyle = {
-            border: `1px solid red`,
-            paddingTop: `${capsulePosition.bottom - capsulePosition.top}px`,
-        }
-        return BarContentStyle
-    }
     useEffect(() => {
         initNavLocation()
     }, [])
     return (
-        <View>
-            <NavBar style={navBarStyle} fixed
+        <Wrapper>
+           <NavBar style={navBarStyle}  fixed
             >
-                <SearchBar shape="round" style={{ border: `1px solid`, height: '100%', width: `100%` }} />
+            <SearchBar shape="round" className='search-height'/>
+          
             </NavBar>
 
-        </View>
+        </Wrapper>
 
     )
 }
+export default Navbar
+const Wrapper = styled(View)`
+width: 100%;
+    .search-height{
+        border: 1px solid blue;
+        height:100%;
+        width: 100vw;
+        --nutui-searchbar-padding:0;
+    }
+`;
