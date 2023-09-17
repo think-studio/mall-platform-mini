@@ -21,6 +21,5 @@ export default Cart;
 const Wrapper = styled(View)`
 	position: relative;
 	height: 100vh;
-	border: 1px solid pink;
 	overflow: hidden;
 `;

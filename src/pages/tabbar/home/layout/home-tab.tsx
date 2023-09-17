@@ -39,7 +39,7 @@ const HomeTab = () => {
                 <p>Tab 1</p>
                 <p>Tab 1</p>
                 <p>Tab 1</p>
-                <p>Tab 1</p>
+                <p>Tab 12234444</p>
                 </Tabs.TabPane>
                 <Tabs.TabPane title="Tab 2"> Tab 2 </Tabs.TabPane>
                 <Tabs.TabPane title="Tab 3"> Tab 3 </Tabs.TabPane>

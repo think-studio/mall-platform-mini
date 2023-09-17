@@ -7,15 +7,12 @@ import Preview from "./preview"
 import Navbar from '/@/components/Navbar/Navbar';
 
 function Home() {
-	let viewRef=useRef(null)
 	useEffect(()=>{
 	},[])
 	return (
 		<Wrapper>
-			{/* <Navbar></Navbar> */}
-			<View className='sttey'>
-				<Preview ></Preview>
-			</View>
+			<Navbar></Navbar>
+			<Preview ></Preview>
 		</Wrapper>
 	);
 }
@@ -24,13 +21,8 @@ function Home() {
 export default Home;
 
 const Wrapper = styled(View)`
+	padding-top:60px;;
 	position: relative;
 	display:flex;
 	flex-direction:column;
-	/* border:4rpx solid pink; */
-	.sttey{
-		background-color: pink;
-		height: 100vh;
-		margin-top: calc(100vh - 60px);
-	}
 `;
